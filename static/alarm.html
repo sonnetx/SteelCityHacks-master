@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timevity</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<style>
+    .timeinp {
+
+        display: inline-table;
+        width: 100px;
+    }
+
+
+
+    .neon {
+        color: rgb(255, 255, 255);
+        text-shadow:
+            0 0 5px rgb(189, 0, 0),
+            0 0 10px rgb(189, 0, 0),
+            0 0 20px rgb(189, 0, 0),
+            0 0 40px rgb(189, 0, 0),
+            0 0 80px rgb(189, 0, 0),
+            0 0 90px rgb(189, 0, 0),
+            0 0 100px rgb(189, 0, 0),
+            0 0 150px rgb(189, 0, 0);
+    }
+
+
+
+    #neon1 {
+        color: rgb(255, 255, 255);
+        text-shadow:
+            0 0 5px rgb(33, 165, 0),
+            0 0 10px rgb(33, 165, 0),
+            0 0 20px rgb(33, 165, 0),
+            0 0 40px rgb(33, 165, 0),
+            0 0 80px rgb(33, 165, 0),
+            0 0 90px rgb(33, 165, 0),
+            0 0 100px rgb(33, 165, 0),
+            0 0 150px rgb(33, 165, 0);
+    }
+
+
+
+
+
+    .minutes {
+        padding: 3px;
+        border: none;
+        margin: 2px;
+    }
+
+    .seconds {
+        border: none;
+        padding: 3px;
+
+        margin: 2px;
+
+
+    }
+
+
+    .minutes:hover {
+        background-color: #D6E8FF;
+        color: #000000;
+        border: none;
+    }
+
+
+
+    .seconds:hover {
+        background-color: #D6E8FF;
+        color: #000000;
+        border: none;
+
+    }
+
+    /* general styling */
+
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    body {
+background-color: #D6E8FF;
+        font-family: -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Oxygen-Sans,
+            Ubuntu,
+            Cantarell,
+            "Helvetica Neue",
+            sans-serif;
+    }
+
+    .btn {
+        background-color: #A63E74;
+        border: none;
+        color: #fff;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+        display: block;
+    }
+
+    .btn:hover {
+        background-color: #D6E8FF;
+        color: rgb(0, 0, 0);
+    }
+
+    #maindiv {
+        background: linear-gradient(90deg, #549dfca1 50%, #A63E748f 50%);
+        width: 350px;
+        height: 450px;
+        padding:3px;
+        box-shadow: 10px 10px #A63E74;
+    }
+</style>
+
+<body>
+
+    <!-- Load the handtrackjs model. -->
+
+
+
+
+
+
+
+
+    <div class="menu">
+        <hr style="border: 1px solid white"/>
+        <table style = "width: 80%; margin-left: 10%; margin-right: 10%"><tr>
+        <td style = "width: 33.3%"> <a href = "index.html" class = "yeet"> Home </a> </td>
+        <td style = "width: 33.3%"> <a href = "alarm.html" class = "yeet"> Alarm </a> </td>
+        <td style = "width: 33.3%"> <a href = "exercise.html" class = "yeet"> Exercise </a> </td>  
+        </tr></table>
+        <hr style="border: 1px solid white"/>
+      </div>
+
+
+
+      <div style = "background-color: #D6E8FF" class="div1">
+        <a href = "index.html"><img src = "graphics/timevity2.png" class="logo" alt = "logo" style = "width: 30%; margin-top: 6%; margin-bottom: 6%"></a>
+        </header>
+    <br/>
+    
+    <div class = "block"> 
+      <h3 style = "color: #A63E74;"> Alarm </h3>
+      <p>The Timevity team created this alarm feature to help remind students when they need to take a break to exercise and keep hydrated while they are focused on their online classes. 
+         <b> To use it,  type in the total time you are going to work/study for, and then type total your break will take.</b>
+          (For example, Length of Work is 50 minutes and Length of break is 10 minutes)
+        <br />         <br /> 
+
+        You may have noticed that a webcam turns on, don't worry, it's actually a feature of this timer. So to stop this timer, put your hand a couple inches from your face.
+        This will refresh the website and turn off the webcam. In order to properly and succesfully use this, please have your body in the orientation below: <b>This is about 20 inches from
+        the laptop, with your hand about 3 inches away from your face. </b>
+        <br /> <br /> 
+        <b>On mobile it's best if you hide the webcam since it can disorient the website. Even if you can't see it, the webcam will start after you press the start button.</b>
+      </p>
+    <img id="orientation" style="border:3px solid #A63E74;" src="./graphics/orientation.png">
+      <br />
+      <p>This way of reseting the timer proves to be helpful because it can restrict the user from touching their face, which is helpful during the pandemic.
+          Plus, the timer also provides you with some exercises to do when taking your break, helping you loosen up and become active after sitting for a extended
+          amount of time.
+      </p>
+    </div>
+    <br/>
+
+
+
+
+    <center>
+
+    <video  style="display: none; border:10px solid #A63E74" height="auto" width="auto" id="video"></video>
+
+</center>
+
+
+
+
+
+
+
+
+
+  
+
+
+<p id="exercises">List of Recommended Exercises: </p>
+
+
+
+
+
+
+
+
+
+
+
+
+    <center>
+        
+        <div id=""style="margin-bottom:20px;
+        background-image: url('https://www.bellacor.com/media.bellacor.com/images/1500/2093MM1757.jpg'); background-position:right; background-position-x: center; background-size: cover; width: 350px;">
+            <div id="maindiv">
+
+
+                 
+                        <center>
+                        <p id="honelm" style="font-size: 20px; font-weight: bold;">Status?</p>
+                    </center>
+               
+
+                    <table>
+
+
+                        <tr>
+                            <td>
+                                <label>Length of Work:</label>
+                                <input id="wrkmin" class="timeinp minutes" type="text" id="fname" name="fname"
+                                    placeholder="Minutes Here" style="margin-bottom: 40px;"></br></br>
+                            </td>
+                            <td> <input id="wrksec" class="timeinp seconds" type="text" id="fname" name="fname"
+                                    placeholder="Seconds Here" style="margin-bottom: 40px;"></br></br>
+
+                            </td>
+
+
+                        </tr>
+
+                        </br>
+
+                        <tr>
+                            <td>
+                                <label>Length of Break:</label>
+                                <input id="brkmin" class="timeinp minutes" type="text" id="fname" name="fname"
+                                    placeholder="Minutes Here"></br></br>
+
+                            </td>
+                            <td> <input id="brksec" class="timeinp seconds" type="text" id="fname" name="fname"
+                                    placeholder="Seconds Here"></br></br>
+
+                            </td>
+
+
+                        </tr>
+
+
+                    </table>
+
+                    </br>
+                    </br>
+
+                    <button class="btn" id="yeet">Click to Start!</button>
+                  
+                    <button class="btn" onclick="showWebcam()" style="font-size:small; padding: 5px;" id="videoOn">Show WebCam Video</button>
+                    <button class="btn" onclick="hideWebcam()" style="font-size:small; padding: 5px;" id="videoOn">Hide WebCam Video</button>
+
+                    <button class="btn"  onclick="refreshPage()" id="boom">Click to Reset!</button>
+
+
+            </div>
+        </div>
+    </center>
+
+
+    <audio id="audio" src="./break.m4a"></audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js">
+    </script>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
